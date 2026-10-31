@@ -1,0 +1,25 @@
+
+# Visual Studio
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.cache
+
+# SSIS generated files
+*.ispac
+*.dtproj.user
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Sensitive configuration
+.env
+*.credentials
