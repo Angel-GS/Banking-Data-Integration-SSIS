@@ -1,0 +1,2016 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/31/2026 11:26:55 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ANGELPC"
+  DTS:CreatorName="ANGELPC\as310"
+  DTS:DTSID="{4DD592DF-2F95-4BEF-A626-43560951E9FB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="BankMarketing_ETL"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{A1CAF773-5C91-4784-8675-F0019D19E624}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CM_BankMarketing_CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5E5F28FE-B54A-4FBF-9F98-B3BA308B78CC}"
+      DTS:ObjectName="CM_BankMarketing_CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\as310\OneDrive\Documents\Cursos\SSIS\Banking-Data-Integration-SSIS\data\Raw\bank+marketing\bank\bank-full.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;age&quot;"
+              DTS:DTSID="{60D5D8F8-B5B3-4A66-8FE8-7EC5930311F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;job&quot;"
+              DTS:DTSID="{D015ACC3-8491-4488-BF83-87093EDC08E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;marital&quot;"
+              DTS:DTSID="{E3EA529D-3111-4EA9-977A-C332800A7A2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;education&quot;"
+              DTS:DTSID="{1E999FFA-75D0-4C7E-8F1B-057F6A8F0978}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;default&quot;"
+              DTS:DTSID="{458F4FB4-1399-4A1C-8725-D90FC9975A4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;balance&quot;"
+              DTS:DTSID="{D1B3A0CE-DF46-44C9-ADC8-1B18D37F614F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;housing&quot;"
+              DTS:DTSID="{35BCA752-36BB-4986-8DC1-EB6C0DC07BDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;loan&quot;"
+              DTS:DTSID="{04838931-F1C9-45CA-AA1E-8BA92E9DA096}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;contact&quot;"
+              DTS:DTSID="{0E043DC0-4CF1-416C-9A5C-E039F7FC6126}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;day&quot;"
+              DTS:DTSID="{AFB0B753-E68B-4558-9B9C-4B39F13CB54A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;month&quot;"
+              DTS:DTSID="{68A982CE-FD5C-4949-A450-0BA020E09181}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;duration&quot;"
+              DTS:DTSID="{447CA3AD-87D8-4BCA-8939-F6BE3B14F6AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;campaign&quot;"
+              DTS:DTSID="{5BD1B83D-BE04-4317-946F-327E9FC89F99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;pdays&quot;"
+              DTS:DTSID="{B9B0C4B4-EF8F-4F0F-919F-8CDDEEEB7F93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;previous&quot;"
+              DTS:DTSID="{31863F6F-F49D-446D-A14B-0EE4DB70DE4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;poutcome&quot;"
+              DTS:DTSID="{E96C31C9-C20A-4BEF-8393-675C73BF77FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;y&quot;"
+              DTS:DTSID="{83683CD5-94A1-4BF0-BD58-1D9EEC229FC6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CM_SQLServer_Banking]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{3B07577C-83D7-49A1-AAA4-1BF7C5C03FD0}"
+      DTS:ObjectName="CM_SQLServer_Banking">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=BankingDataIntegration;Integrated Security=True;Pooling=True;Min Pool Size=0;Max Pool Size=100;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;Packet Size=8000;Type System Version=Latest;Application Name=&quot;Framework Microsoft SqlClient Data Provider&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.BankingDataIntegration]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E13A6FC4-B177-47FC-8E2A-0A9FF7650292}"
+      DTS:ObjectName="localhost.BankingDataIntegration">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=BankingDataIntegration;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-BankMarketing_ETL-{E13A6FC4-B177-47FC-8E2A-0A9FF7650292}localhost.BankingDataIntegration;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_Extract_BankMarketing"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7E83CF3A-68DC-4B07-833A-B5ECE926AA7A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_Extract_BankMarketing"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DST_Rejected_BankMarketing"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Rej_BankMarketing]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.BankingDataIntegration]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.BankingDataIntegration]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[age_int]"
+                      cachedDataType="i4"
+                      cachedName="age_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[age_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;job&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;job&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[job]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;job&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;marital&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;marital&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[marital]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;marital&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;education&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;education&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[education]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;education&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;default&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;default&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[default_credit]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;default&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[balance_int]"
+                      cachedDataType="i4"
+                      cachedName="balance_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[balance]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[balance_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;housing&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;housing&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[housing]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;housing&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;loan&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;loan&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[loan]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;loan&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;contact&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;contact&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[contact]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;contact&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[day_int]"
+                      cachedDataType="i4"
+                      cachedName="day_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[day]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;month&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;month&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[month]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;month&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[duration_int]"
+                      cachedDataType="i4"
+                      cachedName="duration_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[duration]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[duration_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[campaign_int]"
+                      cachedDataType="i4"
+                      cachedName="campaign_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[campaign]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[campaign_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[pdays_int]"
+                      cachedDataType="i4"
+                      cachedName="pdays_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[pdays]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[pdays_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[previous_int]"
+                      cachedDataType="i4"
+                      cachedName="previous_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[previous]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[previous_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;poutcome&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;poutcome&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[poutcome]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;poutcome&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;y&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;y&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[subscribed]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;y&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      dataType="i4"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[job]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="job" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[marital]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="marital" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[education]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="education" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[default_credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="default_credit" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[balance]"
+                      dataType="i4"
+                      name="balance" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[housing]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="housing" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[loan]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="loan" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[contact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="contact" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[day]"
+                      dataType="i4"
+                      name="day" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[month]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="month" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[duration]"
+                      dataType="i4"
+                      name="duration" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[campaign]"
+                      dataType="i4"
+                      name="campaign" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[pdays]"
+                      dataType="i4"
+                      name="pdays" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[previous]"
+                      dataType="i4"
+                      name="previous" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[poutcome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="poutcome" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[subscribed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="subscribed" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DST_Stg_BankMarketing"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stg_BankMarketing]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.BankingDataIntegration]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.BankingDataIntegration]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[age_int]"
+                      cachedDataType="i4"
+                      cachedName="age_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[age_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;job&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;job&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[job]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;job&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;marital&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;marital&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[marital]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;marital&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;education&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;education&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[education]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;education&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;default&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;default&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[default_credit]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;default&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;housing&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;housing&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[housing]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;housing&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;loan&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;loan&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[loan]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;loan&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;contact&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;contact&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[contact]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;contact&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[day_int]"
+                      cachedDataType="i4"
+                      cachedName="day_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[day]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;month&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;month&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[month]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;month&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[duration_int]"
+                      cachedDataType="i4"
+                      cachedName="duration_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[duration]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[duration_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[campaign_int]"
+                      cachedDataType="i4"
+                      cachedName="campaign_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[campaign]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[campaign_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;poutcome&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;poutcome&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[poutcome]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;poutcome&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[&quot;y&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;y&quot;"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[subscribed]"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;y&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[balance_int]"
+                      cachedDataType="i4"
+                      cachedName="balance_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[balance]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[balance_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[previous_int]"
+                      cachedDataType="i4"
+                      cachedName="previous_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[previous]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[previous_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].Columns[pdays_int]"
+                      cachedDataType="i4"
+                      cachedName="pdays_int"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[pdays]"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[pdays_int]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[age]"
+                      dataType="i4"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[job]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="job" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[marital]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="marital" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[education]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="education" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[default_credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="default_credit" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[balance]"
+                      dataType="i4"
+                      name="balance" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[housing]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="housing" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[loan]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="loan" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[contact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="contact" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[day]"
+                      dataType="i4"
+                      name="day" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[month]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="month" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[duration]"
+                      dataType="i4"
+                      name="duration" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[campaign]"
+                      dataType="i4"
+                      name="campaign" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[pdays]"
+                      dataType="i4"
+                      name="pdays" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[previous]"
+                      dataType="i4"
+                      name="previous" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[poutcome]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="poutcome" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input].ExternalColumns[subscribed]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="subscribed" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="SRC_BankMarketing_CSV"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CM_BankMarketing_CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[CM_BankMarketing_CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;age&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;age&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;age&quot;]"
+                      name="&quot;age&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;job&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;job&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;job&quot;]"
+                      name="&quot;job&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;marital&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;marital&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;marital&quot;]"
+                      name="&quot;marital&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;education&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;education&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;education&quot;]"
+                      name="&quot;education&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;default&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;default&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;default&quot;]"
+                      name="&quot;default&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;balance&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;balance&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;balance&quot;]"
+                      name="&quot;balance&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;housing&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;housing&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;housing&quot;]"
+                      name="&quot;housing&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;loan&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;loan&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;loan&quot;]"
+                      name="&quot;loan&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;contact&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;contact&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;contact&quot;]"
+                      name="&quot;contact&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;day&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;day&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;day&quot;]"
+                      name="&quot;day&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;month&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;month&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;month&quot;]"
+                      name="&quot;month&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;duration&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;duration&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;duration&quot;]"
+                      name="&quot;duration&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;campaign&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;campaign&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;campaign&quot;]"
+                      name="&quot;campaign&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;pdays&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;pdays&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;pdays&quot;]"
+                      name="&quot;pdays&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;previous&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;previous&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;previous&quot;]"
+                      name="&quot;previous&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;poutcome&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;poutcome&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;poutcome&quot;]"
+                      name="&quot;poutcome&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;y&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;y&quot;]"
+                      length="50"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;y&quot;]"
+                      name="&quot;y&quot;"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;age&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;age&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;job&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;job&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;marital&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;marital&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;education&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;education&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;default&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;default&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;balance&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;balance&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;housing&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;housing&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;loan&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;loan&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;contact&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;contact&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;day&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;day&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;month&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;month&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;duration&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;duration&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;campaign&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;campaign&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;pdays&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;pdays&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;previous&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;previous&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;poutcome&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;poutcome&quot;" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].ExternalColumns[&quot;y&quot;]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="&quot;y&quot;" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="TRF_ConditionalSplit"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input].Columns[age_int]"
+                      cachedDataType="i4"
+                      cachedName="age_int"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[age_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input].Columns[balance_int]"
+                      cachedDataType="i4"
+                      cachedName="balance_int"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[balance_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input].Columns[day_int]"
+                      cachedDataType="i4"
+                      cachedName="day_int"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input].Columns[duration_int]"
+                      cachedDataType="i4"
+                      cachedName="duration_int"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[duration_int]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Valid_Records]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Valid_Records"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[age_int]} &gt;= 18 &amp;&amp; #{Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[balance_int]} &gt;= 0 &amp;&amp; #{Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]} &gt;= 1 &amp;&amp; #{Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]} &lt;= 31 &amp;&amp; #{Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[duration_int]} &gt;= 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">age_int &gt;= 18 &amp;&amp; balance_int &gt;= 0 &amp;&amp; day_int &gt;= 1 &amp;&amp; day_int &lt;= 31 &amp;&amp; duration_int &gt;= 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Invalid_Records]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Invalid_Records"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="TRF_DataConversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;age&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;age&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;age&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;balance&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;balance&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;balance&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;day&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;day&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;day&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;duration&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;duration&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;duration&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;campaign&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;campaign&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;campaign&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;pdays&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;pdays&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;pdays&quot;]" />
+                    <inputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input].Columns[&quot;previous&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;previous&quot;"
+                      lineageId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns[&quot;previous&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[age_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[age_int]"
+                      name="age_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["age"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[balance_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[balance_int]"
+                      name="balance_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["balance"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[day_int]"
+                      name="day_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["day"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[duration_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[duration_int]"
+                      name="duration_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["duration"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[campaign_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[campaign_int]"
+                      name="campaign_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["campaign"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[pdays_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[pdays_int]"
+                      name="pdays_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["pdays"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[previous_int]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output].Columns[previous_int]"
+                      name="previous_int"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output].Columns["previous"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_Extract_BankMarketing.Paths[Data Conversion Output]"
+              endId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Inputs[Conditional Split Input]"
+              name="Data Conversion Output"
+              startId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DFT_Extract_BankMarketing.Paths[Flat File Source Output]"
+              endId="Package\DFT_Extract_BankMarketing\TRF_DataConversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DFT_Extract_BankMarketing.Paths[Invalid_Records]"
+              endId="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing.Inputs[OLE DB Destination Input]"
+              name="Invalid_Records"
+              startId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Invalid_Records]" />
+            <path
+              refId="Package\DFT_Extract_BankMarketing.Paths[Valid_Records]"
+              endId="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing.Inputs[OLE DB Destination Input]"
+              name="Valid_Records"
+              startId="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit.Outputs[Valid_Records]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL_Prepare_Staging"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Tarea Ejecutar instrucción T-SQL"
+      DTS:DTSID="{F94BD377-75AB-4239-8577-0B302525C983}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL_Prepare_Staging"
+      DTS:TaskContact="Execute T-SQL Statement Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3B07577C-83D7-49A1-AAA4-1BF7C5C03FD0}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Stg_BankMarketing;&#xA;&#xA;TRUNCATE TABLE dbo.Rej_BankMarketing;"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{906956ED-95FB-4CFB-B29B-D8B0B7900F3C}"
+      DTS:From="Package\SQL_Prepare_Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\DFT_Extract_BankMarketing" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="220,42"
+          Id="Package\DFT_Extract_BankMarketing"
+          TopLeft="463.5,130.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\SQL_Prepare_Staging"
+          TopLeft="480,35" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="574.25,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.5"
+              Start="0,0"
+              End="0,46">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_Extract_BankMarketing">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="210,42"
+          Id="Package\DFT_Extract_BankMarketing\SRC_BankMarketing_CSV"
+          TopLeft="454,16" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\DFT_Extract_BankMarketing\TRF_DataConversion"
+          TopLeft="467,98" />
+        <EdgeLayout
+          Id="Package\DFT_Extract_BankMarketing.Paths[Flat File Source Output]"
+          TopLeft="559.25,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183,42"
+          Id="Package\DFT_Extract_BankMarketing\TRF_ConditionalSplit"
+          TopLeft="472,192" />
+        <EdgeLayout
+          Id="Package\DFT_Extract_BankMarketing.Paths[Data Conversion Output]"
+          TopLeft="561.5,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="203,42"
+          Id="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing"
+          TopLeft="294,283" />
+        <EdgeLayout
+          Id="Package\DFT_Extract_BankMarketing.Paths[Valid_Records]"
+          TopLeft="563.5,234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-168,49"
+              Start="0,0"
+              End="-168,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="-4,24.5" />
+                  <mssgle:LineSegment
+                    End="-164,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-164,24.5"
+                    Point2="-168,24.5"
+                    Point3="-168,28.5" />
+                  <mssgle:LineSegment
+                    End="-168,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-115.87076171875,29.5,63.7415234375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="230,42"
+          Id="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing"
+          TopLeft="638,290" />
+        <EdgeLayout
+          Id="Package\DFT_Extract_BankMarketing.Paths[Invalid_Records]"
+          TopLeft="592.666666666667,234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.333333333333,56"
+              Start="0,0"
+              End="160.333333333333,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6912242686891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6912242686891"
+                    Point2="0,22.6912242686891"
+                    Point3="4,22.6912242686891" />
+                  <mssgle:LineSegment
+                    End="156.333333333333,22.6912242686891" />
+                  <mssgle:CubicBezierSegment
+                    Point1="156.333333333333,22.6912242686891"
+                    Point2="160.333333333333,22.6912242686891"
+                    Point3="160.333333333333,26.6912242686891" />
+                  <mssgle:LineSegment
+                    End="160.333333333333,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="44.3824869791667,27.6912242686891,71.568359375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Extract_BankMarketing\DST_Stg_BankMarketing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Extract_BankMarketing\DST_Rejected_BankMarketing">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

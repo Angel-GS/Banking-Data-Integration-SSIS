@@ -26,3 +26,17 @@ CREATE TABLE dbo.Stg_BankMarketing
     subscribed VARCHAR(10)
 );
 GO
+
+
+USE BankingDataIntegration;
+GO
+
+SELECT COUNT(*) AS Total_Valid_Records
+FROM dbo.Stg_BankMarketing;
+
+SELECT TOP 20 *
+FROM dbo.Stg_BankMarketing;
+
+USE BankingDataIntegration;
+GO
+
