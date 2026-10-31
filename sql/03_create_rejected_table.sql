@@ -22,3 +22,27 @@ CREATE TABLE dbo.Rej_BankMarketing
     subscribed VARCHAR(10)
 );
 GO
+
+SELECT COUNT(*) AS Total_Valid_Records
+FROM dbo.Rej_BankMarketing;
+
+
+SELECT
+    (SELECT COUNT(*) FROM dbo.Stg_BankMarketing)
+    +
+    (SELECT COUNT(*) FROM dbo.Rej_BankMarketing)
+    AS Total_Processed_Records;
+
+
+    --Conteo de registros 
+    SELECT
+    'Valid Records' AS Record_Type,
+    COUNT(*) AS Total_Records
+FROM dbo.Stg_BankMarketing
+
+UNION ALL
+
+SELECT
+    'Rejected Records',
+    COUNT(*)
+FROM dbo.Rej_BankMarketing;
